@@ -1,4 +1,7 @@
-import { extendTheme } from "@chakra-ui/react"
+import {
+    extendTheme,
+    //defineStyleConfig
+} from "@chakra-ui/react"
 
 export const theme = extendTheme({
     colors: {
@@ -18,14 +21,23 @@ export const theme = extendTheme({
                 color: 'brand.100',
                 lineHeight: 'tall',
                 bg: 'brand.400',
-                
+
             },
             'header': {
                 bg: 'brand.200',
             },
             a: {
-                color: 'brand.400',
-            },
+                variants: {
+                    navi: {
+                        color: 'brand.400'
+                    },
+                    pagelink: {
+                        color: 'brand.100'
+                    }
+
+                }
+            }
         }
     }
 })
+

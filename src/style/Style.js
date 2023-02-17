@@ -6,10 +6,10 @@ import {
 export const theme = extendTheme({
     colors: {
         brand: {
-            100: "#181823", //black
-            200: "#537FE7", //blue
-            300: "#C0EEF2", //lightblue
-            400: "#E9F8F9", //lightestblue
+            100: "#1A120B", 
+            200: "#3C2A21", 
+            300: "#D5CEA3", 
+            400: "#E5E5CB", 
         },
     },
     styles: {

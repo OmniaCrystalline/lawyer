@@ -5,6 +5,7 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
+    Flex,
 } from '@chakra-ui/react'
 import { HiMinus, HiPlus } from 'react-icons/hi'
 import { servList } from "./ServList"
@@ -41,8 +42,11 @@ const Item = ({ arr }) => {
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4}>
-                        <Image src={img} />
-                        {discription}
+                        <Flex>
+                            <Image src={img} alt={name} />
+                            опис з якими питаннями по {name} можеж допомогти
+                            {discription}
+                        </Flex>
                     </AccordionPanel>
                 </>
             )}

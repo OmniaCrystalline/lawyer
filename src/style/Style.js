@@ -35,8 +35,8 @@ export const theme = extendTheme({
                         color: 'brand.100'
                     }
 
-                }
-            }
+                },
+            },            
         }
     }
 })

@@ -6,6 +6,7 @@ import { ContactsPage } from "./pages/ContactsPage";
 import { Helmet } from "react-helmet-async";
 import { PersonalPage } from "./pages/PersonalPage";
 //import { GoLaw } from 'react-icons/go'
+import "./App.css"
 
 
 function App() {
@@ -16,14 +17,21 @@ function App() {
         <title>Послуги адвоката</title>
         <link rel="canonical" href="https://lawyer-help5.web.app/" />
         <link rel="icon" href="https://live.staticflickr.com/65535/52692761711_ff5ec86e52_q.jpg" />
-        <meta name="description" content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги" />
+        <meta name="description"
+          content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги" />
+        <meta property="og:locale" content="ua"></meta>
+        <meta property="og:site_name" content="Юридична допомога - lawyer-help5"></meta>
+        <meta property="og:type" content="article"></meta>
+        <meta property="og:title" content="допомога адвоката Львів"></meta>
+        <meta property="og:description" content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги"></meta>
+        <meta property="og:url" content="https://lawyer-help5.web.app/"></meta>
       </Helmet>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='/' element={<HomePage />}></Route>
+          <Route index element={<HomePage />}></Route>
           <Route path='/services' element={<ServicesPage />}></Route>
           <Route path='/contacts' element={<ContactsPage />}></Route>
-          <Route path='/lawyer' element={<PersonalPage/>}></Route>
+          <Route path='/lawyer' element={<PersonalPage />}></Route>
         </Route>
       </Routes>
     </div>

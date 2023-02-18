@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { HiMinus, HiPlus } from 'react-icons/hi'
 import { servList } from "./ServList"
+import { Helmet } from 'react-helmet-async'
 
 
 export const Services = () => {
@@ -31,22 +32,28 @@ const Item = ({ arr }) => {
                 <>
                     <h2>
                         <AccordionButton>
-                            <Box as="span" flex='1' textAlign='left'>
+                            <Box as="span"
+                                flex='1'
+                                textAlign='left'
+                            >{isExpanded ? (
+                                <AccordionIcon as={HiMinus} fontSize='12px' mr={[2, 4]} />
+                            ) : (
+                                <AccordionIcon as={HiPlus} fontSize='12px' mr={[2, 4]} />
+                            )}
                                 {name}
                             </Box>
-                            {isExpanded ? (
-                                <AccordionIcon as={HiMinus} fontSize='12px' />
-                            ) : (
-                                <AccordionIcon as={HiPlus} fontSize='12px' />
-                            )}
+
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4}>
-                        <Flex>
+                        <Helmet>
+                            <meta name="description" content={discription} />
+                        </Helmet>
+                        <Flex flexDirection={['column', 'column', 'column', 'row']} align='center'>
                             <Image src={img} alt={name} />
-                            опис з якими питаннями по {name} можеж допомогти
-                            {discription}
+                            <Text p={[2, 4]}>{discription}</Text>
                         </Flex>
+
                     </AccordionPanel>
                 </>
             )}

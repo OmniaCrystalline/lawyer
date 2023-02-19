@@ -8,9 +8,9 @@ export const Contacts = () => {
     return (<>
         <Container as='section' maxW='100vw' centerContent>
             <Box w={['xs', 'sm', 'md', '4xl', '6xl']} gridGap={[2, 4, 6]}  >
-                <Text as='h2' m={[2, 4]}>Зв'яжіться з нами для отримання юридичної допомоги любим доступним методом:</Text>
+                <Text as='h2' m={[2, 4]} textAlign='center'>Зв'яжіться з нами для отримання юридичної допомоги любим доступним методом:</Text>
                 <Flex flexDirection={['column', 'column','column','row']} >
-                    <Image src="https://live.staticflickr.com/65535/52697320692_1e7203ebc3_z.jpg"></Image>
+                    <Image src="https://live.staticflickr.com/65535/52697320692_1e7203ebc3_z.jpg" alt="згода" w={['100%', '100%', '100%', '75%']} ></Image>
                     <Box color='brand.200'>
                         <List p={[2, 4]} display="grid" gridGap={[2, 4]}>
                             <ListItem >

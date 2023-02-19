@@ -27,6 +27,8 @@ export const theme = extendTheme({
                 bg: 'brand.200',
             },
             a: {
+                display: 'flex',
+                alignItems: 'center',
                 variants: {
                     navi: {
                         color: 'brand.400'
@@ -36,7 +38,7 @@ export const theme = extendTheme({
                     }
 
                 },
-            },            
+            }, 
         }
     }
 })

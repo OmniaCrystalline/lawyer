@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lawyer-help",
+  "name": "Lawyer-help",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://live.staticflickr.com/65535/52693215665_88524b3767_q.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://live.staticflickr.com/65535/52693215665_88524b3767_q.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://live.staticflickr.com/65535/52693215665_88524b3767_q.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }

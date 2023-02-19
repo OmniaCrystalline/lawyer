@@ -10,7 +10,7 @@ export const Header = () => {
         textDecoration: "underline",
     };
     return (<Container as='header' maxW='100vw' centerContent>
-        <Flex w={['xs', 'sm', 'md', '4xl', '6xl']} gridGap={[2, 4, 6]} p={[2, 4, 6]} color='brand.400' alignItems='baseline'>
+        <Flex w={['xs', 'sm', 'md', '4xl', '6xl']} gridGap={[2, 4, 6]} p={[2, 4, 6]} color='brand.400' >
             <NavLink to='/' style={({ isActive }) =>
                 isActive ? activeStyle : undefined
             }

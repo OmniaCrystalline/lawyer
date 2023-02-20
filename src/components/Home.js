@@ -4,18 +4,22 @@ import {
     Flex,
     Text
 } from "@chakra-ui/react"
-//import { LoremIpsum } from "react-lorem-ipsum"
 import { qoutes } from "../components/qotes"
 import { useState } from "react"
 import s from './Style.module.css';
+import { useEffect } from "react";
 
 export const Home = () => {
-    const [index, setindex] = useState(0)
-    setInterval(() => {
-        const idx = Math.floor(Math.random() * (5 - 0)) + 0
-        setindex(idx)
-    }, 10000);
+    const [index, setindex] = useState('')
 
+    useEffect(() => {
+        const textChange = setInterval(() => {
+            const idx = Math.floor(Math.random() * (5 - 0)) + 0
+            setindex(qoutes[idx])
+        }, 10000);
+
+        return () => clearTimeout(textChange);
+    }, [])
 
     return (<>
         <Container as='section' maxW='100vw' centerContent>
@@ -29,9 +33,9 @@ export const Home = () => {
                         loading="lazy"
                     ></Image>
                     <Box p={[2, 4]} pos='absolute' top='0' left='0' color='whiteAlpha.800' w='320px' >
-                        <Text as='i' className={s.change} fontSize={['xs', 'xs', 'sm']}>{qoutes[index]}</Text>
+                        <Text as='i' className={s.change} fontSize={['xs', 'xs', 'sm']}>{index}</Text>
                     </Box>
-                    <Box as="article" w={['320px', '320px', '448px', '100%']} p={[2,4]}>
+                    <Box as="article" w={['320px', '320px', '448px', '100%']} p={[2, 4]}>
                         <Text color="brand.200" as='i' >
                             В житті кожної людини може наступити такий момент, коли вона буде потребувати кваліфікованої допомоги юриста, адже кожен може стикнутись з проблемою, коли потрібна потрібна допомога спеціаліста, обізнаного в законодавстві і здатного допомогти в питаннях, тому так важливо щоб Ваші права захищав досвідченний юрист. Звернувшись до нас ви зможете отримати вичерпну консультацію і супровід правозахисника.
                         </Text>

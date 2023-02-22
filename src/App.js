@@ -15,7 +15,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Послуги адвоката</title>
-        <link rel="canonical" href="https://lawyer-help5.web.app/" />
+        <link rel="canonical" href="https://lawyer-help5.firebaseapp.com/" />
         <link rel="icon" href="https://live.staticflickr.com/65535/52692761711_ff5ec86e52_q.jpg" />
         <meta name="description"
           content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Адвокат Україна. Кваліфіковані юридичні послуги" />
@@ -24,7 +24,7 @@ function App() {
         <meta property="og:type" content="article"></meta>
         <meta property="og:title" content="допомога адвоката Львів"></meta>
         <meta property="og:description" content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги"></meta>
-        <meta property="og:url" content="https://lawyer-help5.web.app/"></meta>
+        <meta property="og:url" content="https://lawyer-help5.firebaseapp.com/"></meta>
         <meta name="google-site-verification" content="Xr9roVGkagTpMZxBYqdhcVOfxbC1imUBtsMO1Y7xvd4" />
       </Helmet>
       <Routes>
@@ -33,6 +33,7 @@ function App() {
           <Route path='/services' element={<ServicesPage />}></Route>
           <Route path='/contacts' element={<ContactsPage />}></Route>
           <Route path='/lawyer' element={<PersonalPage />}></Route>
+          <Route path='/google0aaa0969a44cf84d.html' element={'google-site-verification: google0aaa0969a44cf84d.html'} ></Route>
         </Route>
       </Routes>
     </div>

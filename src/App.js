@@ -18,8 +18,8 @@ function App() {
         <link rel="canonical" href="https://lawyer-help5.web.app/" />
         <link rel="icon" href="https://live.staticflickr.com/65535/52692761711_ff5ec86e52_q.jpg" />
         <meta name="description"
-          content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги" />
-        <meta property="og:locale" content="ua"></meta>
+          content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Адвокат Україна. Кваліфіковані юридичні послуги" />
+        <meta property="og:locale" content="uк"></meta>
         <meta property="og:site_name" content="Юридична допомога - lawyer-help5"></meta>
         <meta property="og:type" content="article"></meta>
         <meta property="og:title" content="допомога адвоката Львів"></meta>

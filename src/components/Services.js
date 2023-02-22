@@ -37,6 +37,8 @@ const Item = ({ arr }) => {
                                     display='flex'
                                     textAlign='left'
                                     alignItems='center'
+                                    color='brand.200'
+                                    
                                 >
                                     {isExpanded ? (
                                     <AccordionIcon as={HiMinus} fontSize='12px' mr={[2, 4]} />
@@ -69,6 +71,8 @@ const Item = ({ arr }) => {
 
 const Divorce = () => {
     return (<>
+        <Helmet>
+        </Helmet>
         <Text as='h6'>Розірвання шлюбу під ключ:</Text>
         <OrderedList>
             <ListItem>позовна заява про розірвання шлюбу</ListItem>

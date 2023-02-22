@@ -25,7 +25,7 @@ function App() {
         <meta property="og:title" content="допомога адвоката Львів"></meta>
         <meta property="og:description" content="надаю послуги у вирішенні питань житлових спорів, спадкових спорів, сімейних спорах, земельні спори, договірні правовідносини, адміністративні правопорушення, представництво інтересів потерпілих у кримінальному провадженні. Адвокат Львів недорого. Кваліфіковані юридичні послуги"></meta>
         <meta property="og:url" content="https://lawyer-help5.web.app/"></meta>
-        <meta name="google-site-verification" content="xI7fZEDkAODIvNpjUl2KwcHsH2ek9hYMdbN1pwlbSeQ" />
+        <meta name="google-site-verification" content="Xr9roVGkagTpMZxBYqdhcVOfxbC1imUBtsMO1Y7xvd4" />
       </Helmet>
       <Routes>
         <Route path='/' element={<Layout />}>

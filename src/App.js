@@ -33,7 +33,6 @@ function App() {
           <Route path='/services' element={<ServicesPage />}></Route>
           <Route path='/contacts' element={<ContactsPage />}></Route>
           <Route path='/lawyer' element={<PersonalPage />}></Route>
-          <Route path='/google0aaa0969a44cf84d.html' element={'google-site-verification: google0aaa0969a44cf84d.html'} ></Route>
         </Route>
       </Routes>
     </div>

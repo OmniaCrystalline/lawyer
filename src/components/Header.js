@@ -36,11 +36,6 @@ export const Header = () => {
             to='/lawyer'>
             Юрист
           </NavLink>
-          <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            to='/services2'>
-            2
-          </NavLink>
         </Flex>
       </Container>
     );

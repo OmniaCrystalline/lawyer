@@ -5,9 +5,17 @@ import { HomePage } from '../src/pages/HomePage'
 import { ContactsPage } from "./pages/ContactsPage";
 import { Helmet } from "react-helmet-async";
 import { PersonalPage } from "./pages/PersonalPage";
-import { Services2Page } from "./pages/Services2Page";
+//import { Services2Page } from "./pages/Services2Page";
 //import { GoLaw } from 'react-icons/go'
 import "./App.css"
+import { Alimony, Divorce } from "./components/articles/Divorce";
+import { Victim } from "./components/articles/Victim";
+//import { SideBar } from "./components/Services2";
+import { Inheritance } from "./components/articles/Inheritance";
+import { Landing } from "./components/articles/Landing";
+import { Housing } from "./components/articles/Housing";
+import { Contract } from "./components/articles/Contract";
+import { Admin } from "./components/articles/Admin";
 
 
 function App() {
@@ -45,10 +53,19 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />}></Route>
-          <Route path='services' element={<ServicesPage />}></Route>
           <Route path='contacts' element={<ContactsPage />}></Route>
           <Route path='lawyer' element={<PersonalPage />}></Route>
-          <Route path='services2' element={<Services2Page />}></Route>
+          <Route path='services' element={<ServicesPage />}>
+            <Route path='criminal' element={<Victim />} />
+            <Route path='divorce' element={<Divorce />} />
+            <Route path='inheritance' element={<Inheritance />} />
+            <Route path='landing' element={<Landing />} />
+            <Route path='housing' element={<Housing />} />
+            <Route path='contract' element={<Contract />} />
+            <Route path='inheritance' element={<Inheritance />} />
+            <Route path='alimony' element={<Alimony />} />
+            <Route path='admin' element={<Admin/>} />
+          </Route>
         </Route>
       </Routes>
     </div>

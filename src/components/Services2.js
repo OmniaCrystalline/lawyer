@@ -1,36 +1,83 @@
 /** @format */
 
-import { Container, Grid, ListItem, UnorderedList } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import {  ListItem, List, Icon } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "@chakra-ui/react";
+import {BsFillArrowRightCircleFill, BsFillArrowDownCircleFill} from 'react-icons/bs'
 
-export const Services2 = () => {
+
+export const SideBar = () => {
+  const [isLaptop] = useMediaQuery("(min-width: 992px)")
+  //const firsLink = document.querySelector('.first').cla
+
+  const icon = isLaptop ? <Icon as={BsFillArrowRightCircleFill} /> : <Icon as={BsFillArrowDownCircleFill} />
+
+  const activeStyle = {
+    fontWeight: 'bold',
+  };
   return (
     <>
-      <Container centerContent>
-        <Grid
-          w={["xs", "sm", "md", "4xl", "6xl"]}
-          gridGap={[2, 4, 6]}
-          gridTemplateAreas={[`"sidebar content"`]}
-          p={[2, 4, 6]}>
-          <Container w={["xs", "sm"]}>{/*links*/}</Container>
-          <Container w='1fr'>
-            {/*content*/}
-            222
-          </Container>
-        </Grid>
-      </Container>
-    </>
-  );
-};
-
-const SideBar = () => {
-  return (
-    <>
-      <UnorderedList>
+      <List >
         <ListItem>
-          <Link to='/services2/familly-cases/'></Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='divorce' end>
+            Розірвання шлюбу
+          </NavLink>
         </ListItem>
-      </UnorderedList>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='alimony'>
+            Аліменти під ключ
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='inheritance'>
+            Спадщина
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='criminal'>
+            Захист потерпілого
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='landing'>
+            Земельні спори
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='housing'>
+            Житлові спори
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='contract'>
+            Договірні правовідносини
+          </NavLink>
+        </ListItem>
+        <ListItem>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='admin'>
+            Адміністративні правопорушення
+          </NavLink>
+        </ListItem>
+      </List>
+      {icon}
     </>
   );
 };
+
+

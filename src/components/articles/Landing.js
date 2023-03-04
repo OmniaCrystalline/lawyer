@@ -1,7 +1,7 @@
 import { Box, ListItem, UnorderedList, Text } from "@chakra-ui/react"
 
 export const Landing = () => {
-    return (<Box as='article'>
+    return (<Box as='section'>
         <UnorderedList>
             <ListItem>Земельні спори — це конфлікти щодо права власності, користування чи меж земельної ділянки.</ListItem>
             <ListItem>Земельні спори можуть стосуватися окремих осіб, груп, громад</ListItem>

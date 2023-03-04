@@ -9,22 +9,39 @@ export const Header = () => {
     const activeStyle = {
         textDecoration: "underline",
     };
-    return (<Container as='header' maxW='100vw' centerContent>
-        <Flex w={['xs', 'sm', 'md', '4xl', '6xl']} gridGap={[2, 4, 6]} p={[2, 4, 6]} color='brand.400' >
-            <NavLink to='/' style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-            }
-            ><Icon as={VscLaw} color='brand.300' boxSize={6} /> Головна
-            </NavLink>
-            <NavLink style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-            } to='/services'>Послуги</NavLink>
-            <NavLink style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-            } to='/contacts'>Контакти</NavLink>
-            <NavLink style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-            } to='/lawyer'>Юрист</NavLink>
+    return (
+      <Container as='header' maxW='100vw' centerContent>
+        <Flex
+          w={["xs", "sm", "md", "4xl", "6xl"]}
+          gridGap={[2, 4, 6]}
+          p={[2, 4, 6]}
+          color='brand.400'>
+          <NavLink
+            to='/'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}>
+            <Icon as={VscLaw} color='brand.300' boxSize={6} /> Головна
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='/services'>
+            Послуги
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='/contacts'>
+            Контакти
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='/lawyer'>
+            Юрист
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to='/services2'>
+            2
+          </NavLink>
         </Flex>
-    </Container>)
+      </Container>
+    );
 }

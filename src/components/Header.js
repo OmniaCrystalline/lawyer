@@ -23,7 +23,7 @@ export const Header = () => {
           </NavLink>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            to='/services'>
+            to='/services/divorce'>
             Послуги
           </NavLink>
           <NavLink

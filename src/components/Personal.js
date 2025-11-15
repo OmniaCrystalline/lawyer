@@ -1,4 +1,4 @@
-import { Container, Box, Text, Image, Flex, Heading, Divider, List, ListItem, Icon } from "@chakra-ui/react"
+import { Container, Box, Text, Image, Flex, Heading, List, ListItem, Icon } from "@chakra-ui/react"
 import { Helmet } from "react-helmet-async"
 import { RiSmartphoneFill, RiMailFill } from "react-icons/ri"
 import { FaViber } from "react-icons/fa"

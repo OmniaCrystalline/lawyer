@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet-async";
 
 export const ServicesPage = () => {
   const location = useLocation();
-  const isServicePage = location.pathname !== '/services/divorce';
   
   return (
     <>

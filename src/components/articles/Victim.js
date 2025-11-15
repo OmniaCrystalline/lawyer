@@ -1,10 +1,20 @@
 /** @format */
 
+import { Helmet } from "react-helmet-async";
 import { OrderedList, ListItem, Text, Box } from "@chakra-ui/react";
 
 export const Victim = () => {
   return (
-    <Box as='section'>
+    <>
+      <Helmet>
+        <title>Представництво інтересів потерпілих | Кримінальне право | Адвокат Львів</title>
+        <meta name="description" content="Представництво інтересів потерпілих у кримінальному провадженні. Адвокат допоможе захистити права потерпілого, отримати відшкодування, забезпечити захист." />
+        <meta name="keywords" content="потерпілий, кримінальне право, представництво потерпілих, адвокат Львів, кримінальне провадження" />
+        <link rel="canonical" href="https://lawyer-help5.firebaseapp.com/services/criminal" />
+        <meta property="og:title" content="Представництво інтересів потерпілих | Адвокат Львів" />
+        <meta property="og:description" content="Професійна допомога потерпілим у кримінальному провадженні." />
+      </Helmet>
+      <Box as='section'>
       <Text>
         Якщо ви стали жертвою злочину, можливо, вам цікаво, як вам може
         допомогти адвокат. Адвокат може надати вам юридичну консультацію,
@@ -50,5 +60,6 @@ export const Victim = () => {
         захисником на вашому шляху до зцілення та одужання.
       </Text>
     </Box>
+    </>
   );
 };

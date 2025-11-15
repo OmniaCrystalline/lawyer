@@ -1,4 +1,4 @@
-import { Container, Box, Text, Image} from "@chakra-ui/react"
+import { Container, Box, Text, Image, Heading} from "@chakra-ui/react"
 import {
     Accordion,
     AccordionItem,
@@ -21,10 +21,18 @@ import { Contract } from "./articles/Contract"
 
 export const Services = () => {
     return (<>
-        <Container as='section' maxW='100vw' centerContent>
-            <Box w={['xs', 'sm', 'md', '4xl', '6xl']} gridGap={[2, 4, 6]} p={[2, 4, 6]}>
-                <Text as='h1' p={[2, 4]}>Послуги адвоката</Text>
-                <Accordion allowMultiple >
+        <Container as='section' maxW='100vw' centerContent py={[4, 6, 8]}>
+            <Box w={['100%', 'sm', 'md', '4xl', '6xl']} gridGap={[4, 6]} p={[4, 6]}>
+                <Heading 
+                    as='h1' 
+                    size={['xl', '2xl']}
+                    mb={6}
+                    color='brand.200'
+                    textAlign="center"
+                    fontWeight="700">
+                    Послуги адвоката
+                </Heading>
+                <Accordion allowMultiple>
                     <Item arr={servList} />
                 </Accordion>
             </Box>
@@ -35,49 +43,79 @@ export const Services = () => {
 const Item = ({ arr }) => {
     return (<>
         {arr.map(({ name, description, img }) => {
-            return <AccordionItem key={name}>
-                {({ isExpanded }) => (
-                    <>
-                        <h2>
-                            <AccordionButton>
-                                <Box as="span"
-                                    display='flex'
-                                    textAlign='left'
-                                    alignItems='center'
-                                    color='brand.200'
-                                    
-                                >
-                                    {isExpanded ? (
-                                    <AccordionIcon as={HiMinus} fontSize='12px' mr={[2, 4]} />
-                                ) : (
-                                    <AccordionIcon as={HiPlus} fontSize='12px' mr={[2, 4]} />
-                                    )}
-                                    <Text fontWeight='bold'>{name}</Text>
-                                </Box>
-
-                            </AccordionButton>
-                        </h2>
-                        <AccordionPanel pb={4}>
-                            <Helmet>
-                                <meta name="description" content={description} />
-                            </Helmet>
-                            <Flex flexDirection={['column', 'column', 'column', 'row']}
-                                alignItems={['center', 'center', 'center', 'flex-start']}
-                                gridGap={[2,4]}
-                            >
-                                <Image src={img} alt={name} boxSize='150px' />
-                                {<Box>{name === 'Сімейні спори' && <Divorce />}</Box>}
-                                {<Box>{name === 'Представництво інтересів потерпілих у кримінальному провадженні' && (<Victim />)}</Box>}
-                                {<Box>{name === 'Справи про адміністративні правопорушення' && (<Admin />)} </Box>}
-                                {<Box>{name === 'Спадкові спори' && (<Inheritance />)}</Box>}
-                                {<Box>{name === 'Житлові спори' && (<Housing />)}</Box>}
-                                {<Box>{name === 'Земельні спори' && (<Landing />)}</Box>}
-                                {<Box>{name === 'Договірні правовідносини' && (<Contract />)}</Box>}
-                            </Flex>
-                        </AccordionPanel>
-                    </>
-                )}
-            </AccordionItem>
+            return (
+                <AccordionItem 
+                    key={name}
+                    border="none"
+                    mb={4}
+                    bg="white"
+                    borderRadius="xl"
+                    boxShadow="md"
+                    overflow="hidden"
+                    transition="all 0.3s ease"
+                    _hover={{
+                        boxShadow: "xl",
+                    }}>
+                    {({ isExpanded }) => (
+                        <>
+                            <h2>
+                                <AccordionButton
+                                    py={4}
+                                    px={6}
+                                    bg={isExpanded ? "brand.200" : "white"}
+                                    color={isExpanded ? "white" : "brand.200"}
+                                    _hover={{
+                                        bg: isExpanded ? "brand.300" : "brand.50",
+                                    }}
+                                    transition="all 0.3s ease">
+                                    <Box 
+                                        as="span"
+                                        display='flex'
+                                        textAlign='left'
+                                        alignItems='center'
+                                        flex='1'
+                                        fontWeight="600"
+                                        fontSize={['sm', 'md']}>
+                                        {isExpanded ? (
+                                            <AccordionIcon as={HiMinus} fontSize='20px' mr={[2, 4]} />
+                                        ) : (
+                                            <AccordionIcon as={HiPlus} fontSize='20px' mr={[2, 4]} />
+                                        )}
+                                        <Text>{name}</Text>
+                                    </Box>
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={6} px={6} pt={4}>
+                                <Helmet>
+                                    <meta name="description" content={description} />
+                                </Helmet>
+                                <Flex 
+                                    flexDirection={['column', 'column', 'row']}
+                                    alignItems={['center', 'center', 'flex-start']}
+                                    gridGap={[4, 6]}>
+                                    <Image 
+                                        src={img} 
+                                        alt={name} 
+                                        boxSize={['120px', '150px', '180px']}
+                                        borderRadius="lg"
+                                        objectFit="cover"
+                                        boxShadow="md"
+                                    />
+                                    <Box flex="1">
+                                        {name === 'Сімейні спори' && <Divorce />}
+                                        {name === 'Представництво інтересів потерпілих у кримінальному провадженні' && <Victim />}
+                                        {name === 'Справи про адміністративні правопорушення' && <Admin />}
+                                        {name === 'Спадкові спори' && <Inheritance />}
+                                        {name === 'Житлові спори' && <Housing />}
+                                        {name === 'Земельні спори' && <Landing />}
+                                        {name === 'Договірні правовідносини' && <Contract />}
+                                    </Box>
+                                </Flex>
+                            </AccordionPanel>
+                        </>
+                    )}
+                </AccordionItem>
+            );
         })}
     </>)
 }
